@@ -1,0 +1,19 @@
+// ===== main colors =====
+$brand: #00407a;
+$highlight: #D83612;
+$highlight-hov: darken($highlight, 5%);
+
+// ===== text colors =====
+$text: #413033;
+
+// ===== link colors =====
+$link: lighten($brand, 10%);
+$link-hov: lighten($link, 25%);
+
+// ===== transition =====
+$transition-hover: .3s ease-in-out;
+
+// ===== fonts =====
+$font:       'HelveticaNowDisplay-Regular', sans-serif;
+$font-bold:  'HelveticaNowDisplay-Medium', sans-serif;
+$font-title: 'Hatton-Medium', sans-serif;
