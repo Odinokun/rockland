@@ -30,33 +30,9 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $font-bold;
+  font-family: $font-title;
   font-weight: 400;
   margin: 0 0 10px 0;
-}
-
-h1 {
-  @include responsive-font(34, 24);
-}
-
-h2 {
-  @include responsive-font(30, 22);
-}
-
-h3 {
-  @include responsive-font(28, 20);
-}
-
-h4 {
-  @include responsive-font(26, 18);
-}
-
-h5 {
-  @include responsive-font(24, 17);
-}
-
-h6 {
-  @include responsive-font(20, 16);
 }
 
 p {
@@ -130,33 +106,6 @@ svg {
   overflow: visible;
 }
 
-// подсвечиваем картинки без alt и без заполненного alt
-img[alt=''],
-img:not([alt]) {
-  outline: 5px solid tomato;
-}
-
-// исключение для google-map и fancybox
-.fancybox-container img[alt=''],
-.fancybox-container img:not([alt]),
-.gm-style img[alt=''],
-.gm-style img:not([alt]) {
-  outline: none !important;
-}
-
-// тревога, если первый child внутри списка не li и прочие похожие примеры
-ul > *:not(li),
-ol > *:not(li) {
-  outline: 5px solid tomato;
-}
-
-//изменяем цвет выделения текста мышью
-::selection {
-  // background-color: $brand;
-  // color: $brand;
-  // text-shadow: none;
-}
-
 .main-wrap {
   display: flex;
   flex-direction: column;
@@ -180,7 +129,7 @@ ol > *:not(li) {
 .container {
   position: relative;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1920px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 100px;
 }

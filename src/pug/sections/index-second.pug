@@ -1,0 +1,14 @@
+mixin index-second-item(pic, title)
+  a(href="#").index-second__item.index-second-item
+    img(src="assets/img/index-second-item-" + pic + ".jpg" alt="picture")
+    h3.index-second-item__title #{title}
+    .index-second-item__descr
+      span.index-second-item__descr-text Nourish and invigorate your skin during spa procedures.
+
+//begin index-second
+.index-second
+  .container
+    +index-second-item('01', 'Medical')
+    +index-second-item('02', 'Cosmetic')
+    +index-second-item('03', 'Medical')
+//end index-second

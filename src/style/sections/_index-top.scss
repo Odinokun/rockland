@@ -1,0 +1,49 @@
+.index-top {
+  background-color: #e7c091;
+  background-image: url('../img/bg-index-top.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  .container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+  }
+}
+
+.index-top__title {
+  font-size: 45px;
+  line-height: 1.66;
+  max-width: 780px;
+  margin-bottom: 70px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.index-top__decor {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  max-width: 430px;
+  height: 101px;
+  margin: auto;
+  transform: translateY(50%);
+}
+
+.index-top__decor-line {
+  fill: $text;
+  width: 100%;
+  height: 1px;
+}
+
+.index-top__decor-circle {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+
+  stroke: $text;
+}

@@ -7,7 +7,7 @@ $(function() {
   require('./modules/noJs')();
 
   // begin Sticky header
-  require('./modules/stickyHeader')();
+  // require('./modules/stickyHeader')();
 
   // begin phone mask
   // require('./modules/maskedinput')();
