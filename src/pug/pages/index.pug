@@ -9,15 +9,20 @@ block variables
 
 block content
   .main-wrap.no-js
-    //-include ../sections/header
+    include ../sections/header
 
     //begin content
     main.main.index
       include ../sections/index-top
       include ../sections/index-second
-      .index-third
+      .index__sections-wrap
         include ../sections/index-skin
         include ../sections/index-procedure
+      include ../sections/index-men
+      .index__sections-wrap
+        include ../sections/index-about
+        include ../sections/index-reviews
+      include ../sections/index-inst
     //end content
 
     include ../sections/footer

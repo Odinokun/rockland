@@ -1,0 +1,24 @@
+mixin index-men-slider__slide(title, pic)
+  .index-men-slider__slide
+    .index-men-slider__slide-header
+      .index-men-slider__slide-title #{title}
+    a(href="#").index-men-slider__slide-img
+      img(src="assets/img/index-men-" + pic + ".jpg" alt="picture")
+      +svg('plus')
+
+//begin index-men
+.index-men
+  .container
+    .index-men__left.animate__animated
+      h2.index-men__title Cosmetic for Men
+      button.btn.btn--transparent Schedule Appointment
+
+    //begin index-men__slider
+    .index-men-slider-wrap.animate__animated
+      .index-men__slider.index-men-slider#index-men-slider
+        +index-men-slider__slide('PRP For Hair Growth', '01')
+        +index-men-slider__slide('Facial Contouring', '02')
+        +index-men-slider__slide('Kybella®', '03')
+        +index-men-slider__slide('Mesotherapy', '04')
+    //end index-men__slider
+//end index-men

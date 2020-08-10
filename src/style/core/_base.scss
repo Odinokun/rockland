@@ -83,12 +83,16 @@ button {
 }
 
 input {
-  padding: 3px 10px 5px 10px;
+  font-size: 16px;
+  padding: 0 0 2px 0;
   color: $text;
-  border: 1px solid $text;
-  &::placeholder {
-    @include placeholder-color($text);
-  }
+  border-top: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-bottom: 1px solid $text;
+  border-left: 1px solid transparent;
+  background-color: transparent;
+
+  @include placeholder-color($text);
 }
 
 textarea {
@@ -113,7 +117,7 @@ svg {
   //свойство для исправления бага 100vh для мобильных
   min-height: -moz-available;
   min-height: -webkit-fill-available;
-  min-height: fill-available;
+  min-height:         fill-available;
   //свойство для плавной прокрутки на яблоках
 
   -webkit-overflow-scrolling: touch;
@@ -123,6 +127,8 @@ svg {
 }
 
 .main {
+  background-color: #f8f8fb;
+
   flex-grow: 1;
 }
 
@@ -132,4 +138,33 @@ svg {
   max-width: 1920px;
   margin: 0 auto;
   padding: 0 100px;
+
+  @include max(1024) {
+    padding: 0 50px;
+  }
+  @include max(768) {
+    padding: 0 30px;
+  }
+}
+
+@keyframes lineDraw {
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes svgDraw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-decor {
+  @include max(540) {
+    display: none;
+  }
+}
+
+.animate__animated {
+  opacity: 0;
 }

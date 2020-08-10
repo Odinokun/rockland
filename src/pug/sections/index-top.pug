@@ -1,11 +1,13 @@
 //begin index-top
 .index-top
-  .container
+  .container.animate__animated
     h2.index-top__title Dermatology<br>and cosmetic treatments tailored for your skin
     button.btn.btn--transparent Schedule Appointment
+
+    //begin decor
     .index-top__decor
-      svg.index-top__decor-line
-        use(xlink:href="assets/img/sprite.svg#index-top-line")
-      svg.index-top__decor-circle
-        use(xlink:href="assets/img/sprite.svg#index-top-circle")
+      .index-top__decor-line.animate-decor
+      .index-top__decor-circle.animate-decor
+        include ../elements/decor-circle-100
+    //end decor
 //end index-top

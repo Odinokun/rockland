@@ -1,5 +1,5 @@
 mixin index-second-item(pic, title)
-  a(href="#").index-second__item.index-second-item
+  a(href="#").index-second__item.index-second-item.animate__animated
     img(src="assets/img/index-second-item-" + pic + ".jpg" alt="picture")
     h3.index-second-item__title #{title}
     .index-second-item__descr
@@ -10,5 +10,5 @@ mixin index-second-item(pic, title)
   .container
     +index-second-item('01', 'Medical')
     +index-second-item('02', 'Cosmetic')
-    +index-second-item('03', 'Medical')
+    +index-second-item('03', 'Peels')
 //end index-second

@@ -2,7 +2,7 @@
 .index-procedure
   .container
     //begin index-procedure__row
-    .index-procedure__row
+    .index-procedure__row.index-procedure__row--top.animate__animated
       .index-procedure__text
         h3.index-procedure__title Injectable treatments<br>with proven efficiency
         ul.index-procedure__list
@@ -12,22 +12,27 @@
       .index-procedure__img.index-procedure__img--top
         img(src="assets/img/index-procedure-01.jpg" alt="picture")
 
-        svg(width='1000', height='1', viewBox='0 0 1000 1', xmlns='http://www.w3.org/2000/svg').index-procedure__decor-top-line
-          rect(width='1000', height='1', fill='#413033')
-        svg(width='200', height='200', viewBox='0 0 200 200', fill='none', xmlns='http://www.w3.org/2000/svg').index-procedure__decor-circle
-          circle(cx='100', cy='100', r='99.5', stroke='#413033')
+        //begin decor
+        .index-procedure__decor-top-line.animate-decor
+        .index-procedure__decor-circle.animate-decor
+          include ../elements/decor-circle-200
+        //end decor
     //end index-procedure__row
 
     //begin index-procedure__row
-    .index-procedure__row
+    .index-procedure__row.index-procedure__row--bottom.animate__animated
       .index-procedure__img
         img(src="assets/img/index-procedure-02.jpg" alt="picture")
-        svg(width='1500', height='1', viewBox='0 0 1500 1', xmlns='http://www.w3.org/2000/svg').index-procedure__decor-bottom-line
-          rect(width='1500', height='1', fill='#413033')
+
+        //begin decor
+        .index-procedure__decor-bottom-line.animate-decor
+        //end decor
       .index-procedure__text
         h3.index-procedure__title Exceptional results<br>in dermatological treatments<br>for sensitive men's concerns
-
-  svg(width='1074', height='621', viewBox='0 0 1074 621', xmlns='http://www.w3.org/2000/svg').index-procedure__decor-diagonal
-    rect(y='620', width='1238.48', height='1', transform='rotate(-30 0 620)', fill='#413033')
     //end index-procedure__row
+
+  //begin decor
+  .index-procedure__decor-diagonal.animate-decor
+    include ../elements/decor-diagonal
+  //end decor
 //end index-procedure

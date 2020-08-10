@@ -9,7 +9,7 @@
   width: 100%;
   max-width: 300px;
   min-height: 60px;
-  padding: 10px 25px;
+  padding: 5px 25px;
   cursor: pointer;
   user-select: none;
   transition: $transition-hover;
@@ -20,6 +20,13 @@
   border: 1px solid #413033;
   border-radius: 3px !important;
   box-shadow: none;
+
+  @include max(540) {
+    min-height: 50px;
+  }
+  &:hover {
+    color: #413033;
+  }
 }
 
 .btn--transparent {

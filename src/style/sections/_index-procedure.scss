@@ -1,6 +1,5 @@
 .index-procedure {
   position: relative;
-  margin-bottom: 300px;
   .container {
     max-width: 1490px;
   }
@@ -8,28 +7,63 @@
 
 .index-procedure__row {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+}
+
+.index-procedure__row--top {
+  @include max(540) {
+    flex-direction: column;
+  }
+}
+
+.index-procedure__row--bottom {
+  @include max(540) {
+    flex-direction: column-reverse;
+  }
+}
+
+.index-procedure__text {
+  width: 50%;
+  padding: 30px 0 30px 215px;
+
+  @include max(1400) {
+    padding: 30px 0 30px 100px;
+  }
+  @include max(1024) {
+    padding: 30px 0 30px 50px;
+  }
+  @include max(540) {
+    width: 100%;
+    padding: 30px 0;
+  }
 }
 
 .index-procedure__title {
   font-family: $font-bold;
-  font-size: 30px;
   line-height: 1.66;
   margin: 0;
   color: #413033;
+
+  @include responsive-font(30, 18);
 }
+
 .index-procedure__list {
   margin: 60px 0 0 0;
   padding: 0;
+
+  @include max(1024) {
+    margin: 30px 0 0 0;
+  }
 }
+
 .index-procedure__list-item {
-  font-size: 25px;
   line-height: 1.6;
   position: relative;
   padding-left: 50px;
   list-style: none;
   color: #413033;
+
+  @include responsive-font(25, 16);
   &::before {
     position: absolute;
     top: 50%;
@@ -40,39 +74,126 @@
     background-color: $text;
   }
 }
+
+.index-procedure__img {
+  width: 50%;
+
+  @include max(540) {
+    width: 100%;
+  }
+}
+
 .index-procedure__img {
   position: relative;
   img {
     display: block;
-    max-width: 100%;
+    width: 100%;
   }
 }
+
 .index-procedure__img--top {
-  max-width: 450px;
+  padding-left: 215px;
+
+  @include max(1400) {
+    padding-left: 100px;
+  }
+  @include max(1024) {
+    padding-left: 50px;
+  }
+  @include max(540) {
+    padding-left: 0;
+  }
 }
+
+//begin #DECOR
 .index-procedure__decor-top-line {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 215px;
   width: 1000px;
   height: 1px;
+  pointer-events: none;
+
+  @include max(1400) {
+    left: 100px;
+  }
+  @include max(1024) {
+    left: 50px;
+  }
+  &.active {
+    &::before {
+      animation: lineDraw 1s linear forwards .5s;
+    }
+  }
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    content: '';
+    background-color: $text;
+  }
 }
+
 .index-procedure__decor-circle {
   position: absolute;
   top: -100px;
   right: -100px;
-  margin: auto;
+  fill: transparent;
+  stroke: $text;
+  width: 200px;
+  height: 200px;
+  pointer-events: none;
 
+  stroke-dasharray: 625;
+  stroke-dashoffset: 625;
+  &.active {
+    animation: svgDraw 1s linear forwards 1.5s;
+  }
 }
+
 .index-procedure__decor-bottom-line {
   position: absolute;
   right: calc(100% - 215px);
   bottom: 100px;
-  width: 1500px;
+  width: 700px;
   height: 1px;
+  pointer-events: none;
+
+  @include max(1024) {
+    bottom: 50px;
+  }
+  &.active {
+    &::before {
+      animation: lineDraw 1s linear forwards .5s;
+    }
+  }
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    content: '';
+    background-color: $text;
+  }
 }
+
 .index-procedure__decor-diagonal {
   position: absolute;
   bottom: 0;
   left: 0;
+  stroke: $text;
+  width: 961px;
+  height: 555px;
+  pointer-events: none;
+
+  stroke-dasharray: 1110;
+  stroke-dashoffset: 1110;
+  &.active {
+    animation: svgDraw 1s linear forwards 1.5s;
+  }
 }
+
+//end #DECOR

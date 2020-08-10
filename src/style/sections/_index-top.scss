@@ -1,25 +1,58 @@
 .index-top {
+  position: relative;
   background-color: #e7c091;
   background-image: url('../img/bg-index-top.jpg');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
+
+  @include max(1024) {
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      content: '';
+      background-color: rgba(0, 0, 0, .2);
+    }
+  }
   .container {
     position: relative;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     min-height: 100vh;
+    padding-top: 270px;
+    padding-bottom: 270px;
+
+    @include max(1024) {
+      padding-top: 240px;
+      padding-bottom: 240px;
+    }
+    @include max(768) {
+      padding-top: 160px;
+      padding-bottom: 80px;
+    }
   }
 }
 
 .index-top__title {
-  font-size: 45px;
   line-height: 1.66;
   max-width: 780px;
   margin-bottom: 70px;
   text-transform: uppercase;
   color: #fff;
+
+  @include responsive-font(45, 25);
+  @include max(1024) {
+    margin-bottom: 35px;
+  }
+  @include max(768) {
+    margin-bottom: 20px;
+  }
 }
 
 .index-top__decor {
@@ -32,18 +65,43 @@
   height: 101px;
   margin: auto;
   transform: translateY(50%);
+  pointer-events: none;
 }
 
 .index-top__decor-line {
-  fill: $text;
+  position: relative;
   width: 100%;
   height: 1px;
+  transform: translateY(1px);
+  &.active {
+    &::before {
+      animation: lineDraw 1s linear forwards .5s;
+    }
+  }
+  &::before {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    margin: auto;
+    content: '';
+    background-color: $text;
+  }
 }
 
 .index-top__decor-circle {
+  fill: transparent;
+  stroke: $text;
   width: 100px;
   height: 100px;
   margin: 0 auto;
+  pointer-events: none;
 
-  stroke: $text;
+  stroke-dasharray: 310;
+  stroke-dashoffset: 310;
+  &.active {
+    animation: svgDraw 1s linear forwards 1.5s;
+  }
 }
