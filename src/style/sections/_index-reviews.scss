@@ -1,0 +1,262 @@
+.index-reviews {
+  .container {
+    position: relative;
+    padding-top: 150px;
+    padding-bottom: 150px;
+
+    @include max(1024) {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+    @include max(768) {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+  }
+}
+
+.index-reviews-slider {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1290px;
+  margin: 0 auto;
+
+  .prev,
+  .next {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex: none;
+    width: 50px;
+    height: 33px;
+    margin-top: -33px;
+    cursor: pointer;
+    transition: $transition-hover;
+
+    @include max(540) {
+      margin-top: 30px;
+    }
+    &:hover {
+      width: 190px;
+
+      @include max(540) {
+        width: 120px;
+      }
+      &::before {
+        background-color: #413033;
+      }
+      svg {
+        stroke: #413033;
+      }
+    }
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      margin: auto;
+      content: '';
+      transition: $transition-hover;
+      background-color: #b2adbb;
+    }
+    svg {
+      stroke: #b2adbb;
+      width: 20px;
+      height: 33px;
+      transition: stroke $transition-hover;
+    }
+  }
+  .prev {
+    order: 10;
+    margin-right: 50px;
+  }
+  .next {
+    justify-content: flex-end;
+    order: 11;
+  }
+}
+
+.index-reviews-slider__slide {
+  display: flex !important;
+  align-items: center;
+
+  @include max(768) {
+    flex-direction: column-reverse;
+  }
+}
+
+.index-reviews-slider__review {
+  width: 50%;
+  padding: 50px 50px 50px 0;
+
+  @include max(768) {
+    width: 100%;
+  }
+  @include max(768) {
+    padding: 50px 0 80px 0;
+  }
+  @include max(540) {
+    padding: 50px 0 0 0;
+  }
+}
+
+.index-reviews-slider__review-name {
+  font-family: $font-bold;
+  line-height: 1.67;
+  display: block;
+  margin-bottom: 60px;
+  color: #413033;
+
+  @include responsive-font(30, 18);
+  @include max(1024) {
+    margin-bottom: 30px;
+  }
+}
+
+.index-reviews-slider__review-text {
+  font-family: $font;
+  line-height: 1.6;
+  display: block;
+  max-width: 540px;
+  margin-bottom: 60px;
+  color: #413033;
+
+  @include responsive-font(25, 14);
+  @include max(1024) {
+    margin-bottom: 30px;
+  }
+  @include max(768) {
+    max-width: 100%;
+  }
+}
+
+.index-reviews-slider__review-link {
+  font-family: $font-bold;
+  font-size: 16px;
+  font-style: italic;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  height: 60px;
+  color: #413033;
+  border-bottom: 1px solid #413033;
+}
+
+.index-reviews-slider__right {
+  position: relative;
+  width: 50%;
+
+  @include max(768) {
+    width: 100%;
+  }
+}
+
+.index-reviews-slider__pic {
+  width: 66%;
+  user-select: none;
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.index-reviews-slider__pic-title {
+  font-family: $font-title;
+  line-height: 1.75;
+  position: absolute;
+  top: 50px;
+  left: 66%;
+  max-width: 270px;
+  transform: translateX(-50px);
+  color: #413033;
+
+  @include responsive-font(40, 20);
+}
+
+//begin #DECOR
+.index-reviews__decor-line {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: calc(100% - 200px);
+  height: 1px;
+  margin: auto;
+
+  @include max(1024) {
+    width: calc(100% - 100px);
+  }
+  @include max(768) {
+    width: calc(100% - 60px);
+  }
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 1px;
+    content: '';
+    background-color: $text;
+  }
+  &.active {
+    &::before {
+      animation: lineDraw 1s linear forwards 1.5s;
+    }
+  }
+}
+
+.index-reviews__circle {
+  position: absolute;
+  top: -50px;
+  left: calc(50% + 380px);
+  fill: transparent;
+  stroke: $text;
+  width: 100px;
+  height: 100px;
+  pointer-events: none;
+
+  stroke-dasharray: 311;
+  stroke-dashoffset: 311;
+  @include max(768) {
+    left: calc(66% - 60px);
+  }
+  @include max(540) {
+    width: 80px;
+    height: 80px;
+    top: -40px;
+    left: calc(66% - 50px);
+  }
+  &.active {
+    animation: svgDraw 1s linear forwards .5s;
+  }
+}
+
+.index-reviews__decor-diagonal {
+  position: absolute;
+  z-index: 1;
+  top: -560px;
+  left: 50%;
+  stroke: $text;
+  width: 1400px;
+  height: 809px;
+  pointer-events: none;
+
+  stroke-dasharray: 1616;
+  stroke-dashoffset: 1616;
+  @include max(768) {
+    left: calc(66% - 440px);
+  }
+  &.active {
+    animation: svgDraw 1s linear forwards 1.5s;
+  }
+}
+
+//end #DECOR

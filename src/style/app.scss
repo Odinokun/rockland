@@ -5,6 +5,7 @@
 @import 'core/base';
 
 //elements
+@import 'elements/btns';
 //@import 'elements/burger';
 //@import 'elements/breadcrumbs';
 //@import 'elements/pagination';
@@ -14,6 +15,14 @@
 //section
 @import 'sections/header';
 @import 'sections/footer';
+@import 'sections/index-top';
+@import 'sections/index-second';
+@import 'sections/index-skin';
+@import 'sections/index-procedure';
+@import 'sections/index-men';
+@import 'sections/index-about';
+@import 'sections/index-reviews';
+@import 'sections/index-inst';
 
 //pages
 @import 'pages/index';

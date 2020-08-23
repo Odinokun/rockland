@@ -1,0 +1,45 @@
+.btn {
+  font-family: 'HelveticaNowDisplay-Medium', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 1;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 300px;
+  min-height: 60px;
+  padding: 5px 25px;
+  cursor: pointer;
+  user-select: none;
+  transition: $transition-hover;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #413033;
+  border: 1px solid #413033;
+  border-radius: 3px !important;
+  box-shadow: none;
+
+  @include max(540) {
+    min-height: 50px;
+  }
+  &:hover {
+    color: #413033;
+  }
+}
+
+.btn--transparent {
+  background-color: transparent;
+  &:hover {
+    background-color: #fff;
+  }
+}
+
+.btn--white {
+  background-color: #fff;
+  &:hover {
+    color: #fff;
+    background-color: #413033;
+  }
+}

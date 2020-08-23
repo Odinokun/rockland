@@ -1,0 +1,25 @@
+mixin index-reviews-slider__slide(name)
+  .index-reviews-slider__slide
+    .index-reviews-slider__review
+      span.index-reviews-slider__review-name #{name}
+      span.index-reviews-slider__review-text I don't even know where to start this review, whether to talk about his amazing, clean, beautiful and well organized office, or the absolutely wonderful staff or even Dr. Kotlyar herself.
+      a(href="#" target="_blank" rel="nofollow noopener noreferrer").index-reviews-slider__review-link Read More on Facebook
+    .index-reviews-slider__right
+      .index-reviews-slider__pic
+        img(src="assets/img/reviews-slider-01.jpg" alt="picture")
+      h3.index-reviews-slider__pic-title Your experience matters
+
+//begin index-reviews
+.index-reviews
+  .container.animate__animated
+    //begin decor
+    .index-reviews__decor-line.animate-decor
+    .index-reviews__circle.animate-decor
+      include ../elements/decor-circle-100
+    .index-reviews__decor-diagonal.animate-decor
+      include ../elements/decor-diagonal-lg
+    //end decor
+    .index-reviews__slider.index-reviews-slider#index-reviews-slider
+      +index-reviews-slider__slide('Erica Q.')
+      +index-reviews-slider__slide('John R.')
+//end index-reviews

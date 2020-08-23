@@ -30,33 +30,9 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $font-bold;
+  font-family: $font-title;
   font-weight: 400;
   margin: 0 0 10px 0;
-}
-
-h1 {
-  @include responsive-font(34, 24);
-}
-
-h2 {
-  @include responsive-font(30, 22);
-}
-
-h3 {
-  @include responsive-font(28, 20);
-}
-
-h4 {
-  @include responsive-font(26, 18);
-}
-
-h5 {
-  @include responsive-font(24, 17);
-}
-
-h6 {
-  @include responsive-font(20, 16);
 }
 
 p {
@@ -107,12 +83,16 @@ button {
 }
 
 input {
-  padding: 3px 10px 5px 10px;
+  font-size: 16px;
+  padding: 0 0 2px 0;
   color: $text;
-  border: 1px solid $text;
-  &::placeholder {
-    @include placeholder-color($text);
-  }
+  border-top: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-bottom: 1px solid $text;
+  border-left: 1px solid transparent;
+  background-color: transparent;
+
+  @include placeholder-color($text);
 }
 
 textarea {
@@ -130,33 +110,6 @@ svg {
   overflow: visible;
 }
 
-// подсвечиваем картинки без alt и без заполненного alt
-img[alt=''],
-img:not([alt]) {
-  outline: 5px solid tomato;
-}
-
-// исключение для google-map и fancybox
-.fancybox-container img[alt=''],
-.fancybox-container img:not([alt]),
-.gm-style img[alt=''],
-.gm-style img:not([alt]) {
-  outline: none !important;
-}
-
-// тревога, если первый child внутри списка не li и прочие похожие примеры
-ul > *:not(li),
-ol > *:not(li) {
-  outline: 5px solid tomato;
-}
-
-//изменяем цвет выделения текста мышью
-::selection {
-  // background-color: $brand;
-  // color: $brand;
-  // text-shadow: none;
-}
-
 .main-wrap {
   display: flex;
   flex-direction: column;
@@ -164,7 +117,7 @@ ol > *:not(li) {
   //свойство для исправления бага 100vh для мобильных
   min-height: -moz-available;
   min-height: -webkit-fill-available;
-  min-height: fill-available;
+  min-height:         fill-available;
   //свойство для плавной прокрутки на яблоках
 
   -webkit-overflow-scrolling: touch;
@@ -174,13 +127,44 @@ ol > *:not(li) {
 }
 
 .main {
+  background-color: #f8f8fb;
+
   flex-grow: 1;
 }
 
 .container {
   position: relative;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1920px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 100px;
+
+  @include max(1024) {
+    padding: 0 50px;
+  }
+  @include max(768) {
+    padding: 0 30px;
+  }
+}
+
+@keyframes lineDraw {
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes svgDraw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+//.animate-decor {
+//  @include max(540) {
+//    display: none;
+//  }
+//}
+
+.animate__animated {
+  opacity: 0;
 }

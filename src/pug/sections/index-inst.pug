@@ -1,0 +1,17 @@
+mixin index-inst-pics__item(pic)
+  a(href="#" target="_blank" rel="nofollow noopener noreferrer").index-inst-pics__item
+    img(src="assets/img/index-inst-" + pic + ".jpg" alt="picture")
+    +svg('inst')
+
+//begin index-inst
+.index-inst
+  .container.animate__animated
+    .index-inst__pics.index-inst-pics
+      +index-inst-pics__item('03')
+      +index-inst-pics__item('02')
+      +index-inst-pics__item('01')
+
+    .index-inst__descr
+      h2.index-inst__title Let's Keep in Touch on Instagram
+      a(href="#" target="_blank" rel="nofollow noopener noreferrer").btn.btn--transparent Subscribe
+//end index-inst

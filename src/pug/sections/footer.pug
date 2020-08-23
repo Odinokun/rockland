@@ -1,0 +1,34 @@
+//begin footer
+.footer
+  .container
+    h2.footer__title Subscribe to Our Newsletter and Get Exclusive Offers!
+    //begin footer-form
+    form.footer__form.footer-form
+      input(type='text' placeholder='Name').footer-form__input
+      input(type='email' placeholder='Email').footer-form__input
+      input(type='submit' value='Subscribe').footer-form__submit.btn.btn--transparent
+    //end footer-form
+
+    //begin footer__row
+    .footer__row
+      .footer__item
+        svg.footer__logo
+          use(xlink:href="assets/img/sprite.svg#logo")
+        a(href="#").footer__copyright © 2020. All rights reserved
+
+      .footer__item
+        a(href="tel:8456348800").footer__phone 845 634 8800
+        a(href="mailto:hello@rocklandbeauty.com").footer__email hello@rocklandbeauty.com
+        .footer__social
+          a(href="#" target="_blank" rel="nofollow noopener noreferrer").footer__social-link
+            +svg('inst-footer')
+          a(href="#" target="_blank" rel="nofollow noopener noreferrer").footer__social-link
+            +svg('fb')
+
+      .footer__item
+        a(href="#" target="_blank" rel="nofollow noopener noreferrer").footer__address 20 Squadron Blvd. Suite 400<br>New City, NY 10956
+        .footer__links
+          a(href="#").footer__link Privacy Policy
+          a(href="#").footer__link Terms & Conditions
+    //end footer__row
+//end footer
