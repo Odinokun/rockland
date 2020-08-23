@@ -120,6 +120,10 @@
   @include max(1024) {
     left: 50px;
   }
+  @include max(540) {
+    left: 30%;
+    width: 500px;
+  }
   &.active {
     &::before {
       animation: lineDraw 1s linear forwards .5s;
@@ -148,6 +152,12 @@
 
   stroke-dasharray: 625;
   stroke-dashoffset: 625;
+  @include max(540) {
+    top: -70px;
+    right: -70px;
+    width: 140px;
+    height: 140px;
+  }
   &.active {
     animation: svgDraw 1s linear forwards 1.5s;
   }

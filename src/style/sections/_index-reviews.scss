@@ -195,7 +195,7 @@
     width: calc(100% - 100px);
   }
   @include max(768) {
-    display: none;
+    width: calc(100% - 60px);
   }
   &::before {
     position: absolute;
@@ -226,7 +226,13 @@
   stroke-dasharray: 311;
   stroke-dashoffset: 311;
   @include max(768) {
-    display: none;
+    left: calc(66% - 60px);
+  }
+  @include max(540) {
+    width: 80px;
+    height: 80px;
+    top: -40px;
+    left: calc(66% - 50px);
   }
   &.active {
     animation: svgDraw 1s linear forwards .5s;
@@ -246,7 +252,7 @@
   stroke-dasharray: 1616;
   stroke-dashoffset: 1616;
   @include max(768) {
-    display: none;
+    left: calc(66% - 440px);
   }
   &.active {
     animation: svgDraw 1s linear forwards 1.5s;

@@ -50,6 +50,9 @@
       width: 100px;
       height: 105px;
     }
+    @include max(540) {
+      fill: #fff;
+    }
   }
 }
 

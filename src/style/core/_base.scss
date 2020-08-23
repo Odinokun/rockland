@@ -159,11 +159,11 @@ svg {
   }
 }
 
-.animate-decor {
-  @include max(540) {
-    display: none;
-  }
-}
+//.animate-decor {
+//  @include max(540) {
+//    display: none;
+//  }
+//}
 
 .animate__animated {
   opacity: 0;
