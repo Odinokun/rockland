@@ -6,7 +6,8 @@
 $(document).ready(function ($) {
   pageWidget([
     'index',
-    'inner'
+    'cosmetics',
+    'about',
     ]);
 });
 
@@ -30,7 +31,7 @@ function pageWidget(pages) {
 
 //====== Begin Programmer code ======
 
-let myPath = document.querySelector('.index-reviews__decor-diagonal svg path');
-let pathLength = myPath.getTotalLength();
-
-console.log('path length = ' + pathLength);
+// let myPath = document.querySelector('.index-reviews__decor-diagonal svg path');
+// let pathLength = myPath.getTotalLength();
+//
+// console.log('path length = ' + pathLength);

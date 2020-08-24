@@ -1,0 +1,28 @@
+extends ../_template
+
+block variables
+  - var title       = 'Rockland'
+  - var description = 'Rockland'
+
+  - var pageHeaderTitle = ''
+  - var breadcrumbs     = 'breadcrumbs link'
+
+block content
+  .main-wrap.no-js
+    include ../sections/header
+
+    //begin content
+    main.main.cosmetics
+      include ../sections/cosmetics/cosmetics-top
+
+      .sections-wrap
+        include ../sections/cosmetics/cosmetics-compare
+        include ../sections/cosmetics/cosmetics-slogan
+        include ../sections/cosmetics/cosmetics-articles
+
+      include ../sections/cosmetics/cosmetics-slider
+      include ../sections/cosmetics/cosmetics-warning
+    //end content
+
+    include ../sections/footer
+    include ../sections/scripts

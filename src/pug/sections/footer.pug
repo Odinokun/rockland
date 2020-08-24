@@ -12,8 +12,9 @@
     //begin footer__row
     .footer__row
       .footer__item
-        svg.footer__logo
-          use(xlink:href="assets/img/sprite.svg#logo")
+        a(href="/").footer__logo-link
+          svg.footer__logo
+            use(xlink:href="assets/img/sprite.svg#logo")
         a(href="#").footer__copyright © 2020. All rights reserved
 
       .footer__item

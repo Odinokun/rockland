@@ -1,0 +1,89 @@
+.cosmetics-slogan {
+  position: relative;
+  background-color: #e3e3f5;
+  .container {
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+    @include max(1024) {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+    @include max(768) {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+  }
+}
+
+.cosmetics-slogan__inn {
+  max-width: 1290px;
+  margin: 0 auto;
+}
+
+.cosmetics-slogan__title {
+  font-family: $font-title;
+  font-weight: 500;
+  line-height: 1.67;
+  margin-bottom: 70px;
+  text-transform: uppercase;
+  color: #413033;
+
+  @include responsive-font(45, 25);
+}
+
+.cosmetics-slogan__descr {
+  padding-left: 16%;
+  p {
+    font-size: 25px;
+    font-weight: normal;
+    line-height: 1.6;
+    margin-bottom: 0;
+    color: #413033;
+
+    @include responsive-font(25, 14);
+  }
+}
+
+//begin #DECOR
+.cosmetics-slogan__decor {
+  position: absolute;
+  bottom: 100%;
+  left: 100%;
+  width: 1400px;
+  height: 809px;
+  transform: translate(-530px, 200px);
+  &::before {
+    position: absolute;
+    bottom: 200px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    content: '';
+    background-color: $text;
+  }
+  &.active {
+    &::before {
+      animation: lineDraw 1s linear forwards 1.5s;
+    }
+  }
+}
+
+.cosmetics-slogan__decor-diagonal {
+  z-index: 1;
+  stroke: $text;
+  width: 1400px;
+  height: 809px;
+  pointer-events: none;
+
+  stroke-dasharray: 1616;
+  stroke-dashoffset: 1616;
+  //@include max(768) {
+  //  left: calc(66% - 440px);
+  //}
+  &.active {
+    animation: svgDraw 1s linear forwards .5s;
+  }
+}
+
+//end #DECOR

@@ -147,6 +147,10 @@ svg {
   }
 }
 
+.sections-wrap{
+  overflow: hidden;
+}
+
 @keyframes lineDraw {
   to {
     width: 100%;
@@ -158,12 +162,6 @@ svg {
     stroke-dashoffset: 0;
   }
 }
-
-//.animate-decor {
-//  @include max(540) {
-//    display: none;
-//  }
-//}
 
 .animate__animated {
   opacity: 0;
