@@ -1,7 +1,6 @@
 .index-top {
   position: relative;
   background-color: #e7c091;
-  background-image: url('../img/bg-index-top.jpg');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
@@ -69,6 +68,20 @@
   }
 }
 
+.index-top__subtitle {
+  font-family: $font;
+  font-weight: normal;
+  line-height: 1.6;
+  display: block;
+  max-width: 650px;
+  margin-bottom: 70px;
+  transform: translateY(-20px);
+  color: #fff;
+
+  @include responsive-font(25, 14);
+}
+
+//begin #DECOR
 .index-top__decor {
   position: absolute;
   right: 0;
@@ -128,3 +141,4 @@
     animation: svgDraw 1s linear forwards 1.5s;
   }
 }
+//end #DECOR

@@ -1,0 +1,28 @@
+extends ../_template
+
+block variables
+  - var title       = 'Rockland'
+  - var description = 'Rockland'
+
+  - var pageHeaderTitle = ''
+  - var breadcrumbs     = 'breadcrumbs link'
+
+block content
+  .main-wrap.no-js
+    include ../sections/header
+
+    //begin content
+    main.main.about
+      include ../sections/about/about-top
+
+      .sections-wrap
+        include ../sections/about/about-skin
+        include ../sections/about/about-slogan
+        include ../sections/about/about-experience
+
+      include ../sections/about/about-articles
+      include ../sections/about/about-banner
+    //end content
+
+    include ../sections/footer
+    include ../sections/scripts
