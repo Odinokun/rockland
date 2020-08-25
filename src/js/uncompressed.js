@@ -10,6 +10,7 @@ $(document).ready(function ($) {
     'about',
     'sales',
     'blog',
+    'article',
     ]);
 });
 
