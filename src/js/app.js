@@ -19,7 +19,7 @@ $(function() {
   require('./modules/slick')();
 
   // begin Popup
-  // require('./modules/popup')();
+  require('./modules/popup')();
 
   // begin Animate.css
   require('./modules/animateCss')();

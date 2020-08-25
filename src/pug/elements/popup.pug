@@ -1,17 +1,32 @@
+.popup__layer#popup__layer
+
 //begin popup
-.popup__layer
-.popup
+.popup.popup-share#popup-share
   .popup__close
     +svg('close')
-  .popup__header
-    h2.popup__title Write Review
-  .popup__body
-    // begin schedule-item__form
-    form.popup__form
-        input(name='name' placeholder='Your Name').popup__form-input.input
-        input(name='email' placeholder='Email').popup__form-input.input
-        textarea(placeholder='Your review').popup__form-textarea.textarea
-        .popup__form-submit.btn
-          input(type='submit' value='send')
-    // begin schedule-item__form
+  .popup-share__body
+    h3.popup-share__title Share
+
+    //begin popup-share__social-list
+    ul.popup-share__social-list
+      li.popup-share__social-item
+        a(href="#").popup-share__social-link
+          +svg('share-fb')
+      li.popup-share__social-item
+        a(href="#").popup-share__social-link
+          +svg('share-tw')
+      li.popup-share__social-item
+        a(href="#").popup-share__social-link
+          +svg('share-ln')
+      li.popup-share__social-item
+        a(href="#").popup-share__social-link
+          +svg('share-vk')
+    //end popup-share__social-list
+
+    .popup-share__link
+      .popup-share__link-icon
+        +svg('link')
+      .popup-share__link-text
+        span https://monosnap.com/direct/BlJ18HxT
+
 //end popup
