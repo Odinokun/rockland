@@ -11,6 +11,7 @@ $(document).ready(function ($) {
     'sales',
     'blog',
     'article',
+    'contacts',
     ]);
 });
 
