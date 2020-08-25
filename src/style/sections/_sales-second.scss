@@ -21,6 +21,7 @@
 .sales-second__item {
   position: relative;
   width: calc(33.33% - 53px);
+  margin-bottom: 50px;
 }
 
 .sales-second__item-date {
@@ -131,6 +132,13 @@
   color: #413033;
 
   @include responsive-font(40, 20);
+}
+
+.sales-second__footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 50px;
 }
 
 //begin #DECOR
