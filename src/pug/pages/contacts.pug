@@ -1,0 +1,41 @@
+extends ../_template
+
+block variables
+  - var title       = 'Rockland'
+  - var description = 'Rockland'
+
+  - var pageHeaderTitle = ''
+  - var breadcrumbs     = 'breadcrumbs link'
+
+block content
+  .main-wrap.no-js
+    include ../sections/header-dark
+
+    //begin content
+    main.main.contacts
+      include ../sections/contacts/contacts-header
+      include ../sections/contacts/contacts-second
+      include ../sections/contacts/contacts-form
+
+    //end content
+
+    include ../elements/popup
+    include ../sections/footer
+    include ../sections/scripts
+
+    script.
+      function initMap() {
+        let myLatLng = {lat: 41.158129, lng: -73.983049};
+        let map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 13,
+          center: myLatLng,
+          styles: [{"featureType": "administrative","elementType": "labels.text.fill","stylers": [{"color": "#444444"}]},{"featureType": "landscape","elementType": "all","stylers": [{"color": "#f2f2f2"}]},{"featureType": "poi","elementType": "all","stylers": [{"visibility": "off"}]},{"featureType": "road","elementType": "all","stylers": [{"saturation": -100},{"lightness": 45}]},{"featureType": "road.highway","elementType": "all","stylers": [{"visibility": "simplified"}]},{"featureType": "road.highway","elementType": "geometry.fill","stylers": [{"color": "#ffffff"}]},{"featureType": "road.arterial","elementType": "labels.icon","stylers": [{"visibility": "off"}]},{"featureType": "transit","elementType": "all","stylers": [{"visibility": "off"}]},{"featureType": "water","elementType": "all","stylers": [{"color": "#dde6e8"},{"visibility": "on"}]}]
+        });
+        let marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'Rockland',
+          icon: 'assets/img/marker.svg'
+        });
+      }
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdGbaaf94NCuCkoH98Ry12HA59U0eTqIA&callback=initMap")
