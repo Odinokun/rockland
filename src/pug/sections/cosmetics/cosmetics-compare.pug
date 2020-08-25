@@ -1,14 +1,30 @@
-//begin cosmetics-compare
-.cosmetics-compare
+//begin cosmetics-articles
+.cosmetics-articles
   .container.animate__animated
-    .cosmetics-compare__img
-      .cosmetics-compare__img-before
-        img(src="assets/img/before.jpg" alt="picture")
-        h3.cosmetics-compare__img-title Before
-      .cosmetics-compare__img-after
-        img(src="assets/img/after.jpg" alt="picture")
-        h3.cosmetics-compare__img-title After
-    .cosmetics-compare__descr
-      p Thread lift therapy is a modern way of traditional acupuncture therapy where the target is to control and improve the tissue stimulation and muscle contraction.
-      p These threads are polydioxanone (PDO) filaments that have previously have been used in cardiothoracic surgeries.
-//end cosmetics-compare
+    .cosmetics-articles__inn
+      //begin cosmetic-article
+      .cosmetic-article.animate__animated
+        .cosmetic-article__img-wrap
+          .cosmetic-article__img
+            img(src="assets/img/cosmetic-article-01.jpg" alt="picture")
+        .cosmetic-article__text
+          h3.cosmetic-article__title We Use Nova Threads
+          p The Nova Threads are needles containing several types of PDO threads. These threads are injected in the tissues in a way to remain parallel with the skin surface and provide a supportive network.
+      //end cosmetic-article
+
+      //begin cosmetic-article
+      .cosmetic-article.animate__animated
+        .cosmetic-article__img-wrap
+          a(href="https://youtu.be/6eVdG9WpH4s" data-fancybox="gallery").cosmetic-article__img.cosmetic-article__img--sm.cosmetic-article__img--video
+            img(src="assets/img/cosmetic-article-02.jpg" alt="picture")
+        .cosmetic-article__text
+          h3.cosmetic-article__title We Use Nova Threads
+          p The Nova Threads are needles containing several types of PDO threads. These threads are injected in the tissues in a way to remain parallel with the skin surface and provide a supportive network.
+      //end cosmetic-article
+
+  //begin decor
+  .cosmetics-articles__decor.animate-decor
+    .cosmetics-articles__decor-circle.animate-decor
+      include ../../elements/decor-circle-100
+  //end decor
+//end cosmetics-articles

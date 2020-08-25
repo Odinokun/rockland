@@ -1,0 +1,50 @@
+mixin sale-date
+  .sales-second__item-date
+    span 01.06.20 - 01.07.20
+
+//begin sales-second
+.sales-second
+  .container
+    //begin sales-second__item
+    .sales-second__item.animate__animated
+      +sale-date()
+      .sales-second__item-img
+        img(src="assets/img/sale-01.jpg" alt="picture")
+        .sales-second__item-left
+          h3.sales-second__item-left-title Early Summer Special
+      .sales-second__item-descr
+        h2.sales-second__item-title Early Summer Special
+        p Combine Botox and filler for 15% off through June. Look years younger immediately. Lose the wrinkles, regain the contours! Call 626 449 3830 for an appointment, information, or a complimentary consultation.
+    //end sales-second__item
+
+    //begin sales-second__item
+    .sales-second__item.animate__animated
+      +sale-date()
+      .sales-second__item-img
+        img(src="assets/img/sale-02.jpg" alt="picture")
+        h3.sales-second__item-img-title
+          span -15%
+          br
+          |botox and filler
+      .sales-second__item-descr
+        h2.sales-second__item-title Free Botox Procedure
+        p Combine Botox and filler for 15% off through June. Look years younger immediately. Lose the wrinkles, regain the contours! Call 626 449 3830 for an appointment, information, or a complimentary consultation.
+    //end sales-second__item
+
+    //begin sales-second__item
+    .sales-second__item.animate__animated
+      +sale-date()
+      .sales-second__item-img
+        img(src="assets/img/sale-03.jpg" alt="picture")
+      .sales-second__item-descr
+        h2.sales-second__item-title Summer Sales for You
+        p Combine Botox and filler for 15% off through June. Look years younger immediately. Lose the wrinkles, regain the contours! Call 626 449 3830 for an appointment, information, or a complimentary consultation.
+    //end sales-second__item
+
+    .sales-second__footer
+      button.btn.btn--transparent View All
+
+  //begin DECOR
+  .sales-second__decor-line.animate-decor
+  //end DECOR
+//end sales-second

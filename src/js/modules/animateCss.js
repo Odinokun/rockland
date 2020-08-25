@@ -25,7 +25,6 @@ module.exports = function() {
         let waypoint = new Waypoint({
           element: elem[i],
           handler: function(direction) {
-            console.log('hello');
             this.element.classList.add('animate__fadeIn');
           },
           offset: '80%'

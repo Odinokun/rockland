@@ -4,7 +4,7 @@ $(function() {
   require('./modules/svg4everybody')();
 
   // begin no-JS
-  require('./modules/noJs')();
+  // require('./modules/noJs')();
 
   // begin Sticky header
   // require('./modules/stickyHeader')();
