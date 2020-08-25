@@ -9,6 +9,7 @@ $(document).ready(function ($) {
     'cosmetics',
     'about',
     'sales',
+    'blog',
     ]);
 });
 

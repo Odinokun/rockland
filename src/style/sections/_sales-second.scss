@@ -129,6 +129,7 @@
   font-family: $font-title;
   font-weight: 500;
   line-height: 1.75;
+  margin-bottom: 30px;
   color: #413033;
 
   @include responsive-font(40, 20);
