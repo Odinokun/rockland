@@ -39,6 +39,23 @@
   }
 }
 
+.header--dark {
+  .header__logo svg {
+    fill: $text;
+  }
+  .menu__link,
+  .header__phone,
+  .header__email {
+    color: $text;
+    &:hover {
+      color: $text;
+    }
+    &::before {
+      background-color: $text;
+    }
+  }
+}
+
 .header__logo {
   flex: none;
   svg {

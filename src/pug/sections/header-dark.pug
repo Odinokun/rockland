@@ -1,0 +1,28 @@
+//begin header
+header.header.header--dark#header
+  .container
+    a(href="/").header__logo
+      +svg('logo')
+
+    //begin menu
+    nav.header__menu.menu
+      ul.menu__list
+        li.menu__item
+          a(href="#").menu__link Medical Treatments
+        li.menu__item
+          a(href="#").menu__link Cosmetic Treatments
+        li.menu__item
+          a(href="#").menu__link Specials
+        li.menu__item
+          a(href="#").menu__link Blog
+        li.menu__item
+          a(href="#").menu__link About
+        li.menu__item
+          a(href="#").menu__link Contact Us
+    //end menu
+      
+    .header__contacts
+      a(href="tel:8456348800").header__phone 845 634 8800
+      a(href="mailto:hello@rocklandbeauty.com").header__email hello@rocklandbeauty.com
+    //-include ../elements/burger
+//end header
