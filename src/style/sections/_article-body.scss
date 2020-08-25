@@ -1,0 +1,129 @@
+.article-body {
+  position: relative;
+  .container {
+    padding-top: 150px;
+    padding-bottom: 150px;
+
+    @include max(1024) {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+    @include max(768) {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+  }
+}
+
+.article-body__inn {
+  max-width: 1290px;
+  margin: 0 auto;
+  p {
+    font-family: $font;
+    font-weight: normal;
+    line-height: 1.75;
+    margin-bottom: 40px;
+    color: #413033;
+
+    @include responsive-font(20, 14);
+  }
+}
+
+.article-body__title {
+  font-family: $font-title;
+  font-weight: 500;
+  line-height: 1.75;
+  margin-bottom: 30px;
+  color: #413033;
+
+  @include responsive-font(40, 20);
+}
+
+.article-body__subtitle {
+  font-family: $font-bold;
+  font-weight: bold;
+  line-height: 1.67;
+  margin-bottom: 40px;
+  padding-top: 10px;
+  color: #413033;
+
+  @include responsive-font(30, 16);
+}
+
+.article-body__list {
+  margin: 0 0 40px 0;
+  padding: 0;
+}
+
+.article-body__item {
+  font-weight: normal;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 50px;
+  list-style: none;
+  color: #413033;
+
+  @include responsive-font(25, 14);
+  &::before {
+    position: absolute;
+    top: 18px;
+    left: 0;
+    width: 30px;
+    height: 1px;
+    content: '';
+    background-color: $text;
+  }
+}
+
+.article-body__footer {
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+  span {
+    font-family: $font-bold;
+    font-weight: bold;
+    line-height: 1.67;
+    display: block;
+    padding-right: 40px;
+    color: #413033;
+
+    @include responsive-font(30, 16);
+  }
+}
+
+//begin #DECOR
+.article-body__decor-line {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: calc(100% - 200px);
+  height: 1px;
+  margin: auto;
+  pointer-events: none;
+
+  @include max(1024) {
+    width: calc(100% - 100px);
+  }
+  @include max(768) {
+    width: calc(100% - 60px);
+  }
+  &.active {
+    &::before {
+      animation: lineDraw 1s linear forwards .5s;
+    }
+  }
+  &::before {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    margin: auto;
+    content: '';
+    background-color: $text;
+  }
+}
+
+//end #DECOR
