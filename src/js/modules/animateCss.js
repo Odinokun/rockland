@@ -11,7 +11,7 @@ module.exports = function() {
           handler: function(direction) {
             this.element.classList.add('active');
           },
-          offset: '80%'
+          offset: '90%'
         })
       }
     }
@@ -27,7 +27,7 @@ module.exports = function() {
           handler: function(direction) {
             this.element.classList.add('animate__fadeIn');
           },
-          offset: '80%'
+          offset: '70%'
         })
       }
     }
