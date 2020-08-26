@@ -25,22 +25,22 @@
   align-items: flex-start;
   width: calc(33.33% - 53px);
   margin-bottom: 50px;
-@include max(1400) {
-  width: calc(33.33% - 25px);
-}
-  @include max(768) {
-  width: calc(50% - 15px);
 
+  @include max(1400) {
+    width: calc(33.33% - 25px);
+  }
+  @include max(768) {
+    width: calc(50% - 15px);
   }
   @include max(375) {
     width: 100%;
   }
 }
 
-
 .blog-second__item-img {
   position: relative;
   margin-bottom: 57px;
+
   @include max(1024) {
     margin-bottom: 40px;
   }
@@ -99,6 +99,7 @@
   text-decoration: none;
   color: #413033;
   border-bottom: 1px solid $text;
+
   @include max(768) {
     height: 40px;
   }
@@ -109,6 +110,7 @@
   justify-content: center;
   width: 100%;
   padding-top: 50px;
+
   @include max(768) {
     padding-top: 30px;
   }

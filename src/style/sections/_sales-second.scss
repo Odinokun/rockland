@@ -12,7 +12,7 @@
       padding-bottom: 100px;
     }
     @include max(768) {
-      padding-top: 50px;
+      padding-top: 80px;
       padding-bottom: 50px;
     }
   }
@@ -22,6 +22,25 @@
   position: relative;
   width: calc(33.33% - 53px);
   margin-bottom: 50px;
+
+  @include max(1600) {
+    width: calc(33.33% - 25px);
+  }
+  @include max(1200) {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+  }
+  //@include max(768) {
+  //  width: calc(50% - 15px);
+  //  margin-bottom: 30px;
+  //  &:last-child {
+  //    margin: 0 auto;
+  //  }
+  //}
+  @include max(540) {
+    flex-direction: column;
+  }
 }
 
 .sales-second__item-date {
@@ -32,10 +51,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  max-width: calc(50% - 40px);
+  width: 205px;
   height: 40px;
   padding: 0 10px;
+  text-align: center;
+  white-space: nowrap;
   border-radius: 20px;
   background-color: rgba(255, 255, 255, .5);
   span {
@@ -51,24 +71,50 @@
 .sales-second__item-img {
   position: relative;
   margin-bottom: 57px;
+
+  @include max(1200) {
+    flex: none;
+    margin-right: 50px;
+    margin-bottom: 0;
+  }
+  @include max(768) {
+    margin-right: 30px;
+  }
+  @include max(540) {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
   img {
+    display: block;
     width: 100%;
-    height: 520px;
     object-fit: cover;
     object-position: center;
+
+    @include max(1200) {
+      width: 300px;
+      height: 300px;
+    }
+    @include max(768) {
+      width: 250px;
+      height: 250px;
+    }
+    @include max(540) {
+      width: 100%;
+      height: auto;
+    }
   }
 }
 
 .sales-second__item-left {
   position: absolute;
   top: 0;
+  bottom: 0;
   left: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 50%;
-  height: 520px;
   background-color: #e3e3f5;
 }
 
@@ -83,6 +129,11 @@
   color: #413033;
 
   @include responsive-font(35, 18);
+  @include max(1400) {
+    padding-left: 10px;
+
+    @include responsive-font(30, 18);
+  }
 }
 
 .sales-second__item-img-title {
@@ -104,13 +155,19 @@
   color: #fff;
 
   @include responsive-font(35, 18);
+  @include max(1400) {
+    @include responsive-font(30, 18);
+  }
   span {
     font-weight: 500;
     line-height: 20px;
     text-transform: uppercase;
     color: #fff;
 
-    @include responsive-font(120, 80);
+    @include responsive-font(120, 60);
+    @include max(1400) {
+      @include responsive-font(100, 60);
+    }
   }
 }
 
@@ -133,6 +190,12 @@
   color: #413033;
 
   @include responsive-font(40, 20);
+  @include max(1200) {
+    transform: translateY(-7px);
+  }
+  @include max(768) {
+    margin-bottom: 0;
+  }
 }
 
 .sales-second__footer {
@@ -140,6 +203,10 @@
   justify-content: center;
   width: 100%;
   padding-top: 50px;
+
+  @include max(768) {
+    padding-top: 30px;
+  }
 }
 
 //begin #DECOR
