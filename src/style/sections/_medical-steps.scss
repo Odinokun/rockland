@@ -1,0 +1,146 @@
+.medical-steps {
+  background-color: #e3e3f5;
+  .container {
+    padding-top: 150px;
+    padding-bottom: 130px;
+
+    @include max(1024) {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+    @include max(768) {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+  }
+}
+
+.medical-steps__inn {
+  max-width: 1290px;
+  margin: 0 auto;
+}
+
+.medical-steps__title {
+  font-family: $font-title;
+  font-weight: 500;
+  line-height: 1.67;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  color: #413033;
+
+  @include responsive-font(45, 25);
+}
+
+.medical-steps__descr {
+  font-family: $font;
+  font-weight: normal;
+  line-height: 1.6;
+  display: block;
+  max-width: 1060px;
+  margin-bottom: 110px;
+  color: #413033;
+
+  @include responsive-font(25, 14);
+}
+
+//begin #SLIDER
+.medical-steps__slider {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  .slick-track {
+    display: flex;
+  }
+
+  .prev,
+  .next {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex: none;
+    width: 50px;
+    height: 33px;
+    margin-top: 90px;
+    cursor: pointer;
+    transition: $transition-hover;
+
+    //@include max(540) {
+    //  margin-top: 30px;
+    //}
+    &:hover {
+      width: 190px;
+
+      //@include max(540) {
+      //  width: 120px;
+      //}
+      &::before {
+        background-color: #413033;
+      }
+      svg {
+        stroke: #413033;
+      }
+    }
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      margin: auto;
+      content: '';
+      transition: $transition-hover;
+      background-color: #b2adbb;
+    }
+    svg {
+      stroke: #b2adbb;
+      width: 20px;
+      height: 33px;
+      transition: stroke $transition-hover;
+    }
+  }
+  .prev {
+    order: 10;
+    margin-right: 50px;
+  }
+  .next {
+    justify-content: flex-end;
+    order: 11;
+  }
+}
+
+.medical-steps__slider-item {
+  display: flex !important;
+  flex-direction: column;
+  height: auto;
+  padding-right: 50px;
+  list-style: none;
+}
+
+.medical-steps__slider-title {
+  font-family: $font-bold;
+  font-weight: bold;
+  line-height: 1.67;
+  padding-bottom: 5px;
+  color: #413033;
+  border-bottom: 1px solid $text;
+
+  @include responsive-font(30, 16);
+}
+
+.medical-steps__slider-descr {
+  padding-top: 25px;
+  p {
+    font-family: $font;
+    font-weight: normal;
+    line-height: 1.75;
+    color: #413033;
+
+    @include responsive-font(20, 14);
+  }
+}
+
+//end #SLIDER

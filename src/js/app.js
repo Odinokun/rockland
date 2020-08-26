@@ -15,6 +15,9 @@ $(function() {
   // begin Scroll2Ancor
   // require('./modules/scroll2ancor')();
 
+  // begin fixed card in scroll
+  require('./modules/fixedMedical')();
+
   // begin Slick slider
   require('./modules/slick')();
 
