@@ -11,7 +11,7 @@ module.exports = function() {
           handler: function(direction) {
             this.element.classList.add('active');
           },
-          offset: '70%'
+          offset: '80%'
         })
       }
     }

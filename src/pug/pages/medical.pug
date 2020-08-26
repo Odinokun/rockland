@@ -1,0 +1,21 @@
+extends ../_template
+
+block variables
+  - var title       = 'Rockland'
+  - var description = 'Rockland'
+
+  - var pageHeaderTitle = ''
+  - var breadcrumbs     = 'breadcrumbs link'
+
+block content
+  .main-wrap.no-js
+    include ../sections/header-dark
+
+    //begin content
+    main.main.medical
+      include ../sections/medical/medical-top
+      include ../sections/medical/medical-steps
+    //end content
+
+    include ../sections/footer
+    include ../sections/scripts
