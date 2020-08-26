@@ -19,11 +19,19 @@
   display: flex;
   max-width: 1290px;
   margin: 0 auto;
+
+  @include max(540) {
+    flex-direction: column;
+  }
 }
 
 .cosmetics-warning__left,
 .cosmetics-warning__right {
   width: 50%;
+
+  @include max(540) {
+    width: 100%;
+  }
 }
 
 .cosmetics-warning__title {
@@ -35,6 +43,10 @@
   color: #413033;
 
   @include responsive-font(45, 25);
+  @include max(540) {
+    max-width: 100%;
+    margin-bottom: 25px;
+  }
 }
 
 .cosmetics-warning__list-title {
@@ -61,6 +73,9 @@
   color: #413033;
 
   @include responsive-font(25, 14);
+  @include max(540) {
+    padding-left: 40px;
+  }
   &::before {
     position: absolute;
     top: 18px;
@@ -69,5 +84,18 @@
     height: 1px;
     content: '';
     background-color: $text;
+
+    @include max(1024) {
+      top: 15px;
+    }
+    @include max(768) {
+      top: 13px;
+    }
+    @include max(540) {
+      width: 20px;
+    }
+    @include max(375) {
+      top: 11px;
+    }
   }
 }

@@ -11,8 +11,12 @@
       padding-bottom: 100px;
     }
     @include max(768) {
-      padding-top: 50px;
+      flex-direction: column;
+      padding-top: 100px;
       padding-bottom: 50px;
+    }
+    @include max(540) {
+      padding-top: 50px;
     }
   }
 }
@@ -21,6 +25,11 @@
   position: relative;
   display: flex;
   width: 50%;
+
+  @include max(768) {
+    width: 100%;
+    margin-bottom: 50px;
+  }
   &::before {
     position: absolute;
     z-index: 1;
@@ -30,6 +39,11 @@
     height: calc(100% + 60px);
     content: '';
     background-color: #413033;
+
+    @include max(540) {
+      top: -15px;
+      height: calc(100% + 30px);
+    }
   }
 }
 
@@ -59,12 +73,26 @@
   text-transform: uppercase;
   color: #fff;
 
-  @include responsive-font(45, 25);
+  @include responsive-font(45, 20);
+  @include max(540) {
+    bottom: 25px;
+  }
+  @include max(375) {
+    bottom: 15px;
+  }
 }
 
 .cosmetics-compare__descr {
   width: 50%;
   padding-left: 100px;
+
+  @include max(1200) {
+    padding-left: 50px;
+  }
+  @include max(768) {
+    width: 100%;
+    padding-left: 0;
+  }
   p {
     font-family: $font;
     font-size: 25px;
@@ -74,6 +102,9 @@
     color: #413033;
 
     @include responsive-font(25, 14);
+    @include max(768) {
+      margin-bottom: 15px;
+    }
     &:last-child {
       margin-bottom: 0;
     }

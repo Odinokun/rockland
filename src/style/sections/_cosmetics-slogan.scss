@@ -30,10 +30,23 @@
   color: #413033;
 
   @include responsive-font(45, 25);
+  @include max(1024) {
+    margin-bottom: 50px;
+  }
+  @include max(768) {
+    margin-bottom: 20px;
+  }
 }
 
 .cosmetics-slogan__descr {
   padding-left: 16%;
+
+  @include max(1024) {
+    padding-left: 100px;
+  }
+  @include max(768) {
+    padding-left: 0;
+  }
   p {
     font-size: 25px;
     font-weight: normal;
