@@ -17,13 +17,18 @@
     position: relative;
     margin-bottom: 75px;
     transform: translateY(0);
+
+    @include max(768) {
+      margin-bottom: 40px;
+    }
   }
 }
+
 .about-banner__title {
   font-weight: 500;
   line-height: 1.75;
-  margin: 0 auto;
   max-width: 980px;
+  margin: 0 auto;
   text-align: center;
   color: #413033;
 

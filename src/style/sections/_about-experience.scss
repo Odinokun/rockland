@@ -20,10 +20,23 @@
   align-items: center;
   max-width: 1290px;
   margin: 0 auto;
+
+  @include max(540) {
+    flex-direction: column;
+    align-items: stretch;
+  }
 }
 
 .about-experience__text {
   padding-right: 100px;
+
+  @include max(1200) {
+    padding-right: 50px;
+  }
+  @include max(540) {
+    margin-bottom: 30px;
+    padding-right: 0;
+  }
   p {
     font-size: 25px;
     font-weight: normal;
@@ -42,11 +55,26 @@
   color: #413033;
 
   @include responsive-font(40, 20);
+  @include max(768) {
+    margin-bottom: 20px;
+  }
+  @include max(540) {
+    line-height: 1.4;
+    margin-bottom: 15px;
+  }
 }
 
 .about-experience__img {
   flex: none;
   width: 430px;
+
+  @include max(1024) {
+    width: 100%;
+    max-width: 50%;
+  }
+  @include max(540) {
+    max-width: 100%;
+  }
   img {
     display: block;
     width: 100%;
@@ -75,6 +103,12 @@
     content: '';
     transform: translateX(645px);
     background-color: $text;
+
+    @include max(1024) {
+      right: auto;
+      left: -50vw;
+      transform: translateX(0);
+    }
   }
   &.active {
     &::before {
@@ -97,15 +131,11 @@
 
   stroke-dasharray: 624;
   stroke-dashoffset: 624;
-  //@include max(768) {
-  //  left: calc(66% - 60px);
-  //}
-  //@include max(540) {
-  //  width: 80px;
-  //  height: 80px;
-  //  top: -40px;
-  //  left: calc(66% - 50px);
-  //}
+  @include max(768) {
+    top: 40px;
+    width: 120px;
+    height: 120px;
+  }
   &.active {
     animation: svgDraw 1s linear forwards .5s;
   }

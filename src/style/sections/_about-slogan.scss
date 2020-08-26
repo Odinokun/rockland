@@ -2,6 +2,10 @@
   position: relative;
   margin-top: -100px;
   background-color: #e3e3f5;
+
+  @include max(768) {
+    margin-top: 0;
+  }
   .container {
     padding-top: 250px;
     padding-bottom: 250px;
@@ -21,11 +25,20 @@
   display: flex;
   max-width: 1290px;
   margin: 0 auto;
+
+  @include max(768) {
+    flex-direction: column;
+  }
 }
 
 .about-slogan__left {
   width: 50%;
   padding-right: 50px;
+
+  @include max(768) {
+    width: 100%;
+    padding-right: 0;
+  }
   p {
     font-family: $font-bold;
     font-weight: bold;
@@ -35,11 +48,19 @@
     color: #413033;
 
     @include responsive-font(30, 16);
+    @include max(768) {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
   }
 }
 
 .about-slogan__right {
   width: 50%;
+
+  @include max(768) {
+    width: 100%;
+  }
   p {
     font-family: $font;
     font-weight: normal;
