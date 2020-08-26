@@ -109,6 +109,7 @@
   display: flex;
   margin: 0;
   padding: 0;
+
   @include max(540) {
     flex-wrap: wrap;
   }
@@ -131,7 +132,6 @@
   }
   @include max(375) {
     margin: 0 30px 18px 0;
-
   }
 }
 
@@ -150,7 +150,6 @@
       width: 60px;
       height: 60px;
     }
-
   }
 }
 
@@ -174,6 +173,7 @@
   flex: none;
   padding: 15px;
   border-right: 1px solid #413033;
+
   @include max(540) {
     padding: 10px;
   }
@@ -223,9 +223,8 @@
   .contacts-form__title {
     line-height: 1.4;
     margin-bottom: 64px;
+
     @include responsive-font(40, 25);
-
-
     @include max(1024) {
       margin-bottom: 40px;
     }
