@@ -111,10 +111,10 @@
   //transform: translateY(50%);
   pointer-events: none;
 
-  @include max(540) {
-    max-width: 280px;
-    height: 88px;
-  }
+  //@include max(540) {
+  //  max-width: 280px;
+  //  height: 88px;
+  //}
 }
 
 .medical-top__decor-line {
@@ -150,10 +150,10 @@
 
   stroke-dasharray: 311;
   stroke-dashoffset: 311;
-  @include max(540) {
-    width: 80px;
-    height: 80px;
-  }
+  //@include max(540) {
+  //  width: 80px;
+  //  height: 80px;
+  //}
   &.active {
     animation: svgDraw 1s linear forwards 1.5s;
   }

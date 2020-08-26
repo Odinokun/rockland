@@ -70,6 +70,10 @@
     @include max(540) {
       fill: #fff;
     }
+    @include max(375) {
+      width: 80px;
+      height: 84px;
+    }
   }
 }
 
@@ -146,7 +150,7 @@
   text-transform: uppercase;
   color: #fff;
 
-  @include responsive-font(25, 18);
+  @include responsive-font(25, 16);
 }
 
 .header__email {
@@ -156,4 +160,6 @@
   text-align: right;
   white-space: nowrap;
   color: #fff;
+
+  @include responsive-font(15, 13);
 }

@@ -3,6 +3,19 @@
   .container {
     padding-top: 250px;
     padding-bottom: 100px;
+
+    @include max(1024) {
+      padding-top: 175px;
+      padding-bottom: 75px;
+    }
+    @include max(768) {
+      padding-top: 100px;
+      padding-bottom: 50px;
+    }
+    @include max(540) {
+      padding-top: 150px;
+      padding-bottom: 50px;
+    }
   }
 }
 
@@ -34,10 +47,10 @@
   @include max(768) {
     width: calc(100% - 60px);
   }
-  @include max(540) {
-    max-width: 280px;
-    height: 88px;
-  }
+  //@include max(540) {
+  //  max-width: 280px;
+  //  height: 88px;
+  //}
 }
 
 .blog-header__decor-line {
@@ -74,10 +87,10 @@
 
   stroke-dasharray: 311;
   stroke-dashoffset: 311;
-  @include max(540) {
-    width: 80px;
-    height: 80px;
-  }
+  //@include max(540) {
+  //  width: 80px;
+  //  height: 80px;
+  //}
   &.active {
     animation: svgDraw 1s linear forwards 1.5s;
   }
