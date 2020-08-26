@@ -1,6 +1,10 @@
 .medical-top {
   position: relative;
   display: flex;
+
+  @include max(540) {
+    flex-direction: column;
+  }
 }
 
 .medical-top__left {
@@ -10,18 +14,50 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   width: 50%;
   height: 100vh;
   background-color: #fff;
+
+  @include max(540) {
+    position: relative;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding-top: 150px;
+    padding-bottom: 50px;
+    background-color: #f8f8f8;
+  }
   &.fixed {
     position: fixed;
+
+    @include max(540) {
+      position: relative;
+    }
   }
 }
 
 .medical-top__left-inn {
-  max-width: 430px;
-  margin-left: 100px;
+  width: 100%;
+  //max-width: 430px;
+  //margin-left: 100px;
+  max-width: 745px;
+  padding-left: 100px;
+
+  @include max(1024) {
+    padding-right: 25px;
+    padding-left: 50px;
+  }
+  @include max(768) {
+    padding-right: 15px;
+    padding-left: 30px;
+  }
+  @include max(540) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 30px;
+  }
 }
 
 .medical-top__title {
@@ -32,6 +68,12 @@
   color: #413033;
 
   @include responsive-font(45, 25);
+  @include max(1024) {
+    margin-bottom: 30px;
+  }
+  @include max(540) {
+    margin-bottom: 15px;
+  }
 }
 
 .medical-top__right {
@@ -39,11 +81,20 @@
   flex-direction: column;
   width: 50%;
   margin-left: auto;
+
+  @include max(540) {
+    width: 100%;
+  }
 }
 
 .medical-top__right-img {
   display: flex;
   height: 100vh;
+
+  @include max(540) {
+    position: relative;
+    height: auto;
+  }
   img {
     display: block;
     width: 100%;
@@ -54,6 +105,13 @@
 
 .medical-top__right-bottom {
   padding: 150px 100px 120px 100px;
+
+  @include max(1024) {
+    padding: 100px 50px 100px 50px;
+  }
+  @include max(768) {
+    padding: 50px 30px 50px 30px;
+  }
   p {
     font-family: $font;
     font-weight: normal;
@@ -87,10 +145,21 @@
   text-decoration: none;
   color: #413033;
   border-bottom: 1px solid $text;
+
+  @include max(1024) {
+    margin-bottom: 100px;
+  }
+  @include max(768) {
+    margin-bottom: 50px;
+  }
 }
 
 .medical-top__right-bottom-img {
   margin-bottom: 75px;
+
+  @include max(768) {
+    margin-bottom: 50px;
+  }
   img {
     display: block;
     width: 100%;
@@ -108,13 +177,15 @@
   max-width: 430px;
   height: 101px;
   margin: auto;
-  //transform: translateY(50%);
   pointer-events: none;
 
-  //@include max(540) {
-  //  max-width: 280px;
-  //  height: 88px;
-  //}
+  @include max(540) {
+    top: auto;
+    bottom: 0;
+    max-width: 280px;
+    height: 88px;
+    transform: translateY(50%);
+  }
 }
 
 .medical-top__decor-line {
@@ -150,10 +221,10 @@
 
   stroke-dasharray: 311;
   stroke-dashoffset: 311;
-  //@include max(540) {
-  //  width: 80px;
-  //  height: 80px;
-  //}
+  @include max(540) {
+    width: 80px;
+    height: 80px;
+  }
   &.active {
     animation: svgDraw 1s linear forwards 1.5s;
   }

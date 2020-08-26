@@ -29,6 +29,9 @@
   color: #413033;
 
   @include responsive-font(45, 25);
+  @include max(1024) {
+    margin-bottom: 25px;
+  }
 }
 
 .medical-steps__descr {
@@ -41,6 +44,9 @@
   color: #413033;
 
   @include responsive-font(25, 14);
+  @include max(1024) {
+    margin-bottom: 50px;
+  }
 }
 
 //begin #SLIDER
@@ -65,6 +71,12 @@
     margin-top: 90px;
     cursor: pointer;
     transition: $transition-hover;
+    @include max(1024) {
+      margin-top: 50px;
+    }
+    @include max(768) {
+      margin-top: 30px;
+    }
 
     //@include max(540) {
     //  margin-top: 30px;

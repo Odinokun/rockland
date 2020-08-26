@@ -11,6 +11,12 @@
   .medical-top__right#medical-top__right
     .medical-top__right-img.animate__animated
       img(src="assets/img/medical-01.jpg" alt="picture")
+      //begin decor
+      .medical-top__decor
+        .medical-top__decor-line.animate-decor
+        .medical-top__decor-circle.animate-decor
+          include ../../elements/decor-circle-100
+      //end decor
     .medical-top__right-bottom.animate__animated
       h3.medical-top__right-title What are Cysts?
       p A cutaneous cyst gets semi-fluid material in it and is like a lesion forming a cavity under the skin.
@@ -21,10 +27,4 @@
       p Even though cysts can be left untreated for years, if the cyst is small, it can easily be removed with minor surgery without any significant treatment. Larger ones, if reach towards inflammation or infection, that’s when they get removed.
   //end medical-top__right
 
-  //begin decor
-  .medical-top__decor
-    .medical-top__decor-line.animate-decor
-    .medical-top__decor-circle.animate-decor
-      include ../../elements/decor-circle-100
-  //end decor
 //end medical-top

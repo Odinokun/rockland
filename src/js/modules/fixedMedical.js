@@ -12,14 +12,20 @@ module.exports = function() {
     heightElem = 0;
   }
 
-  $(window).scroll(function() {
+  function blockFix() {
     //если прокрутка < высота прокручиваемого блока - высота окна
     if($(window).scrollTop() < (heightElem - $(window).height())) {
       fixedCard.addClass("fixed");
     } else {
       fixedCard.removeClass("fixed");
     }
+  }
+
+  $(window).scroll(function() {
+    blockFix()
   });
+
+  blockFix()
   // end fixed card in scroll
 
 };
