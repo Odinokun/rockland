@@ -20,24 +20,24 @@
   width: calc(100% - 200px);
   max-height: 96vh;
   padding: 180px 180px;
-  transform: translate3d(-50%, -50%, 0.1px);
+  transform: translate3d(-50%, -50%, .1px);
   background-color: #f8f8f8;
 
+  @include max(1600) {
+    padding: 180px 130px;
+  }
   @include max(1400) {
     width: calc(100% - 100px);
     padding: 150px 100px;
   }
   @include max(1024) {
-    padding: 100px 30px;
     min-height: 360px;
+    padding: 100px 30px;
   }
   @include max(768) {
     width: calc(100% - 60px);
-    padding: 80px 30px 50px 30px;
     min-height: 0;
-  }
-  @include max(375) {
-    
+    padding: 80px 30px 50px 30px;
   }
 }
 
@@ -49,6 +49,7 @@
   width: 60px;
   height: 60px;
   cursor: pointer;
+
   @include max(1024) {
     width: 50px;
     height: 50px;
@@ -61,6 +62,7 @@
     stroke: $text;
     width: 60px;
     height: 60px;
+
     @include max(1024) {
       width: 50px;
       height: 50px;
@@ -78,6 +80,17 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+
+  @include max(1200) {
+    flex-wrap: wrap;
+  }
+  @include max(1024) {
+    padding-top: 30px;
+  }
+  @include max(540) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 .popup-share__title {
@@ -86,18 +99,40 @@
   margin: 0;
   color: #413033;
 
-  @include responsive-font(40, 20);
+  @include responsive-font(40, 30);
+  @include max(540) {
+    margin-bottom: 25px;
+  }
 }
 
 .popup-share__social-list {
   display: flex;
   margin: 0;
   padding: 0;
+  @include max(540) {
+    flex-wrap: wrap;
+  }
 }
 
 .popup-share__social-item {
   margin: 0 20px;
   list-style: none;
+
+  @include max(1200) {
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  @include max(540) {
+    margin: 0 18px 18px 0;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  @include max(375) {
+    margin: 0 30px 18px 0;
+
+  }
 }
 
 .popup-share__social-link {
@@ -106,13 +141,30 @@
     stroke: $text;
     width: 60px;
     height: 60px;
+
+    @include max(768) {
+      width: 50px;
+      height: 50px;
+    }
+    @include max(375) {
+      width: 60px;
+      height: 60px;
+    }
+
   }
 }
 
 .popup-share__link {
   display: flex;
+  width: 100%;
+  max-width: 490px;
   border: 1px solid #413033;
   border-radius: 3px;
+
+  @include max(1200) {
+    max-width: 100%;
+    margin-top: 25px;
+  }
 }
 
 .popup-share__link-icon {
@@ -122,6 +174,10 @@
   flex: none;
   padding: 15px;
   border-right: 1px solid #413033;
+  @include max(540) {
+    padding: 10px;
+  }
+
   svg {
     stroke: $text;
     width: 30px;
@@ -130,16 +186,30 @@
 }
 
 .popup-share__link-text {
-  font-family: $font-bold;
-  font-size: 16px;
-  font-weight: 500;
   display: flex;
+  overflow: hidden;
   justify-content: center;
   align-items: center;
-  width: 430px;
+  width: 100%;
+  max-width: 430px;
   padding: 15px;
   text-align: center;
-  color: #413033;
+
+  @include max(1200) {
+    max-width: 100%;
+  }
+  @include max(540) {
+    padding: 10px;
+  }
+  span {
+    font-family: $font-bold;
+    font-size: 16px;
+    font-weight: 500;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #413033;
+  }
 }
 
 //end #POPUP SHARE
@@ -151,8 +221,11 @@
   justify-content: center;
   width: 100%;
   .contacts-form__title {
+    line-height: 1.4;
     margin-bottom: 64px;
-    line-height: 1.74;
+    @include responsive-font(40, 25);
+
+
     @include max(1024) {
       margin-bottom: 40px;
     }
@@ -161,7 +234,6 @@
     }
     @include max(540) {
       margin-bottom: 15px;
-
     }
   }
   .contacts-form__form-submit {

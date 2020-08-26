@@ -64,6 +64,9 @@
   color: #413033;
 
   @include responsive-font(25, 14);
+  @include max(540) {
+    padding-left: 40px;
+  }
   &::before {
     position: absolute;
     top: 18px;
@@ -72,6 +75,19 @@
     height: 1px;
     content: '';
     background-color: $text;
+
+    @include max(1024) {
+      top: 15px;
+    }
+    @include max(768) {
+      top: 13px;
+    }
+    @include max(540) {
+      width: 20px;
+    }
+    @include max(375) {
+      top: 11px;
+    }
   }
 }
 
@@ -79,6 +95,10 @@
   display: flex;
   align-items: center;
   padding-top: 20px;
+
+  @include max(768) {
+    flex-direction: column;
+  }
   span {
     font-family: $font-bold;
     font-weight: bold;
@@ -88,6 +108,10 @@
     color: #413033;
 
     @include responsive-font(30, 16);
+    @include max(768) {
+      margin-bottom: 20px;
+      padding-right: 0;
+    }
   }
 }
 
