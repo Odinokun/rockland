@@ -27,15 +27,15 @@
     flex-direction: column;
     justify-content: center;
     min-height: 100vh;
-    padding-top: 270px;
-    padding-bottom: 270px;
+    padding-top: 300px;
+    padding-bottom: 250px;
 
     @include max(1024) {
-      padding-top: 240px;
-      padding-bottom: 240px;
+      padding-top: 250px;
+      padding-bottom: 250px;
     }
     @include max(768) {
-      padding-top: 160px;
+      padding-top: 170px;
       padding-bottom: 80px;
     }
   }
@@ -141,4 +141,5 @@
     animation: svgDraw 1s linear forwards 1.5s;
   }
 }
+
 //end #DECOR

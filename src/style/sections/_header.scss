@@ -31,6 +31,7 @@
   width: 100%;
   .container {
     display: flex;
+    align-items: flex-start;
     padding-top: 70px;
 
     @include max(1024) {
@@ -43,21 +44,31 @@
   .header__logo svg {
     fill: $text;
   }
-  .menu__link,
   .header__phone,
   .header__email {
     color: $text;
     &:hover {
       color: $text;
     }
-    &::before {
-      background-color: $text;
-    }
   }
 }
 
 .header__logo {
   flex: none;
+  margin-right: 75px;
+
+  @include max(1600) {
+    margin-right: 50px;
+  }
+  @include max(1400) {
+    margin-right: 90px;
+  }
+  @include max(768) {
+    margin-right: 50px;
+  }
+  @include max(540) {
+    margin-right: 0;
+  }
   svg {
     fill: #fff;
     width: 170px;
@@ -77,64 +88,6 @@
   }
 }
 
-//begin #MENU
-.menu {
-  padding-left: 75px;
-
-  @include max(1600) {
-    padding-left: 50px;
-  }
-  @include max(1400) {
-    display: none;
-  }
-}
-
-.menu__list {
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-.menu__item {
-  padding: 0 22px;
-  list-style: none;
-
-  @include max(1600) {
-    padding: 0 15px;
-  }
-}
-
-.menu__link {
-  font-family: $font-bold;
-  font-size: 18px;
-  line-height: 1.11;
-  position: relative;
-  display: inline-block;
-  padding: 0 0 22px 0;
-  white-space: nowrap;
-  color: #fff;
-  &::before {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 1px;
-    margin: auto;
-    content: '';
-    transition: $transition-hover;
-    background-color: #fff;
-  }
-  &:hover {
-    color: #fff;
-    &::before {
-      width: 100%;
-    }
-  }
-}
-
-//end #MENU
-
 .header__contacts {
   display: flex;
   flex-direction: column;
@@ -151,6 +104,9 @@
   color: #fff;
 
   @include responsive-font(25, 16);
+  @include max(540) {
+    margin-top: 60px;
+  }
 }
 
 .header__email {

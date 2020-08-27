@@ -3,17 +3,11 @@ $(function() {
   // begin SVG for IE
   require('./modules/svg4everybody')();
 
-  // begin no-JS
-  // require('./modules/noJs')();
-
   // begin Sticky header
   // require('./modules/stickyHeader')();
 
-  // begin phone mask
-  // require('./modules/maskedinput')();
-
-  // begin Scroll2Ancor
-  // require('./modules/scroll2ancor')();
+  // begin menu
+  require('./modules/menu')();
 
   // begin fixed card in scroll
   require('./modules/fixedMedical')();

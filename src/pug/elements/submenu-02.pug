@@ -1,0 +1,36 @@
+//begin submenu
+.submenu#submenu-02
+  include submenu-close
+  .submenu__inn
+    ul.submenu__list
+      li.submenu__item
+        h4.submenu__title Medical
+        ul.submenu__sublist
+          each val, index in ['Acne Treatments', 'Botox for Hyperhidrosis', 'Hair Loss Treatments', 'Placenta Treatments']
+            li.submenu__subitem
+              a(href="#").submenu__sublink= val
+      li.submenu__item
+        h4.submenu__title Surgical
+        ul.submenu__sublist
+          each val, index in ['Cyst Removal', 'Skin Tag Removal']
+            li.submenu__subitem
+              a(href="#").submenu__sublink= val
+      li.submenu__item
+        h4.submenu__title Cosmetic
+        ul.submenu__sublist
+          each val, index in ['Botox Cosmetic', 'Dermal Fillers', 'Facial Contouring', 'Kybella', 'Platelet-Rich Plasma – PRP', 'Thread Lift', 'Mesotherapy']
+            li.submenu__subitem
+              a(href="#").submenu__sublink= val
+      li.submenu__item
+        h4.submenu__title Cosmetic for Men
+        ul.submenu__sublist
+          each val, index in ['PRP For Hair Growth', 'Facial Contouring', 'Kybella', 'Mesotherapy']
+            li.submenu__subitem
+              a(href="#").submenu__sublink= val
+      li.submenu__item
+        h4.submenu__title MedSpa
+        ul.submenu__sublist
+          each val, index in ['Peels']
+            li.submenu__subitem
+              a(href="#").submenu__sublink= val
+//end submenu

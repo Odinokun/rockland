@@ -1,0 +1,11 @@
+//begin submenu
+.submenu#submenu-01
+  include submenu-close
+  .submenu__inn
+    ul.submenu__list
+      li.submenu__item
+        ul.submenu__sublist
+          each val, index in ['Acne', 'Acne Scars','Brown Spots', 'Cysts', 'Double Chin', 'Enlarged Pores', 'Excessive Sweating', 'Fat', 'Hair Loss', 'Hyperpigmentation', 'Loose Skin', 'Melasma', 'Rosacea', 'Skin Tag', 'Thin Lips', 'Warts', 'Wrinkles']
+            li.submenu__subitem
+              a(href="#").submenu__sublink= val
+//end submenu

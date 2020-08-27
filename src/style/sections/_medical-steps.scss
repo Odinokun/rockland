@@ -71,6 +71,7 @@
     margin-top: 90px;
     cursor: pointer;
     transition: $transition-hover;
+
     @include max(1024) {
       margin-top: 50px;
     }
@@ -78,15 +79,9 @@
       margin-top: 30px;
     }
 
-    //@include max(540) {
-    //  margin-top: 30px;
-    //}
     &:hover {
       width: 190px;
 
-      //@include max(540) {
-      //  width: 120px;
-      //}
       &::before {
         background-color: #413033;
       }

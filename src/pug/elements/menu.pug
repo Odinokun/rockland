@@ -1,0 +1,31 @@
+//begin menu
+.header__menu
+  include menu-close
+  .header__menu-inn
+    nav.menu
+      ul.menu__list
+        li.menu__item
+          a(href="#submenu-01").menu__link.menu__link--parent Medical Treatments
+            .menu__link-btn
+              svg.arr-right
+                use(xlink:href="assets/img/sprite.svg#arr-right")
+              svg.arr-right-line
+                use(xlink:href="assets/img/sprite.svg#arr-right-line")
+          include submenu-01
+        li.menu__item
+          a(href="#submenu-02").menu__link.menu__link--parent Cosmetic Treatments
+            .menu__link-btn
+              svg.arr-right
+                use(xlink:href="assets/img/sprite.svg#arr-right")
+              svg.arr-right-line
+                use(xlink:href="assets/img/sprite.svg#arr-right-line")
+          include submenu-02
+        li.menu__item
+          a(href="sales.html").menu__link Specials
+        li.menu__item
+          a(href="blog.html").menu__link Blog
+        li.menu__item
+          a(href="about.html").menu__link About
+        li.menu__item
+          a(href="contacts.html").menu__link Contact Us
+//end menu

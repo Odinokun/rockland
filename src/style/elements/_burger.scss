@@ -1,59 +1,68 @@
-$burger-height: 17px;
-$burger-width: 24px;
-$burger-color: #fff;
-$burger-item: 3px;
-$burger-item-offset: $burger-height - $burger-item * 2;
-$burger-item-shadow: -1 * $burger-item - ($burger-item-offset - $burger-item) / 2;
-
 .burger {
-  position: relative;
-  display: inline-flex;
-}
-
-.burger__input {
-  position: absolute;
-  z-index: 10;
-  top: 0;
-  left: 0;
-  display: block;
-  width: $burger-width;
-  height: $burger-height;
-  cursor: pointer;
-  opacity: 0;
-
-  &:checked + .burger__label::before {
-    transform: translateY($burger-height / 2 - $burger-item * .5) rotateZ(45deg);
-  }
-
-  &:checked + .burger__label::after {
-    transform: translateY($burger-height / 2 - $burger-item * 1.5) rotateZ(-45deg);
-
-    filter: initial;
-  }
-}
-
-.burger__label {
-  width: $burger-width;
-  height: $burger-height;
-  margin: auto;
+  display: none;
+  align-items: center;
+  padding: 0;
   cursor: pointer;
   user-select: none;
-  color: $burger-color;
-  border-radius: $burger-item / 2;
+  border: none;
+  border-radius: 0 !important;
+  background-color: transparent;
+  box-shadow: none;
 
-  &::before,
-  &::after {
-    display: block;
-    height: $burger-item;
-    content: '';
-    transition: .5s;
-    border-radius: inherit;
-    background: $burger-color;
+  @include max(1400) {
+    display: flex;
   }
+  @include max(540) {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    flex-direction: row-reverse;
+  }
+}
 
-  &::after {
-    transform: translateY($burger-item-offset);
+.burger__btn {
+  flex: none;
+  margin-right: 20px;
 
-    filter: drop-shadow(0 $burger-item-shadow $burger-color);
+  @include max(768) {
+    margin-right: 15px;
+  }
+  @include max(540) {
+    margin-right: 0;
+    margin-left: 15px;
+  }
+  svg {
+    stroke: #fff;
+    width: 60px;
+    height: 60px;
+
+    @include max(768) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+.burger__text {
+  font-family: 'HelveticaNowDisplay-Medium', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #fff;
+
+  @include max(768) {
+    font-size: 14px;
+  }
+}
+
+.header--dark {
+  .burger__btn {
+    svg {
+      stroke: $text;
+    }
+  }
+  .burger__text {
+    color: $text;
   }
 }

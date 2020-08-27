@@ -1,0 +1,56 @@
+.menu__close,
+.submenu__close {
+  position: absolute;
+  z-index: 1;
+  top: 60px;
+  right: 60px;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: $transition-hover;
+  background-color: transparent;
+
+  @include max(1024) {
+    top: 44px;
+    right: 44px;
+    width: 44px;
+    height: 44px;
+  }
+  @include max(767) {
+    top: 16px;
+    right: 16px;
+  }
+  &:hover {
+    background-color: #fff;
+  }
+  svg {
+    stroke: $text;
+    width: 60px;
+    height: 60px;
+
+    @include max(1024) {
+      width: 44px;
+      height: 44px;
+    }
+  }
+}
+
+.menu__close {
+  pointer-events: none;
+  opacity: 0;
+
+  &.active {
+    @include max(1400) {
+      pointer-events: auto;
+      opacity: 1;
+    }
+  }
+}
+
+.submenu__close {
+  background-color: #f8f8f8;
+
+  @include max(767) {
+    display: none !important;
+  }
+}
