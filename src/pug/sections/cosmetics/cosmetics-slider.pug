@@ -1,13 +1,33 @@
 //begin cosmetics-slider
-//.cosmetics-slider.animate__animated
-//.cosmetics-slider
+.cosmetics-slider.animate__animated
+  //begin move-field
+  .move-field(style='background-color: #c4c3c5;')
+    img(src="assets/img/cosmetics-slide-lg.jpg" alt="picture").move-field__img#move-field__img
+  //end move-field
+
+  //begin cosmetics-slider__list
   ul.cosmetics-slider__list#cosmetics-slider__list
-    li.cosmetics-slider__list-item(style='background-color: #759;')
-      //-img(src="assets/img/temp-slider.jpg" alt="picture")
-      h1 #1
-    li.cosmetics-slider__list-item(style='background-color: #486;')
-      //-img(src="assets/img/temp-slider.jpg" alt="picture")
-      h1 #2
-    li.cosmetics-slider__list-item(style='background-color: #741;')
-      h1 #3
+    li.cosmetics-slider__list-item
+      //.cosmetics-slider__arrows-title
+        span Upper and lower cheeks and lower cheeks
+      .cosmetics-slider__arrows-title
+        span Upper and lower cheeks
+    li.cosmetics-slider__list-item
+      .cosmetics-slider__arrows-title
+        span There are many variations of passages of Lorem
+    li.cosmetics-slider__list-item
+      .cosmetics-slider__arrows-title
+        span Upper and lower cheeks 2
+    li.cosmetics-slider__list-item
+      .cosmetics-slider__arrows-title
+        span Upper and lower cheeks 3
+    li.cosmetics-slider__list-item
+      .cosmetics-slider__arrows-title
+        span Upper and lower cheeks 4
+  //end cosmetics-slider__list
+
+  .container.cosmetics-slider__container
+    h2.cosmetics-slider__title Areas Targeted<br>by PDO Thread Lift
+    button.btn.btn--transparent Schedule Appointment
+
 //end cosmetics-slider
