@@ -1,0 +1,17 @@
+.about {
+  .index-top {
+    @include max(540) {
+      background-position: 65% 50%;
+    }
+    .index-top__title {
+      max-width: 650px;
+
+      @include max(1024) {
+        max-width: 50%;
+      }
+      @include max(540) {
+        max-width: 300px;
+      }
+    }
+  }
+}
