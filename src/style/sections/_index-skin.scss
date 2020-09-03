@@ -4,6 +4,7 @@
     align-items: center;
 
     @include max(540) {
+      padding-top: 20px;
       flex-direction: column-reverse;
     }
   }
@@ -15,7 +16,7 @@
 
   @include max(540) {
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 0;
   }
   img {
     display: block;

@@ -1,4 +1,7 @@
 .index-second {
+  @include max(540) {
+    display: none;
+  }
   .container {
     display: flex;
     justify-content: space-between;

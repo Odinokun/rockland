@@ -93,6 +93,9 @@
   flex-direction: column;
   margin-left: auto;
   text-align: right;
+  @include max(540) {
+    display: none;
+  }
 }
 
 .header__phone {
