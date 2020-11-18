@@ -4,8 +4,8 @@
     align-items: center;
 
     @include max(540) {
-      padding-top: 20px;
       flex-direction: column-reverse;
+      padding-top: 20px;
     }
   }
 }

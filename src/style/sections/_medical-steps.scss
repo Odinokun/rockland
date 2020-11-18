@@ -59,7 +59,10 @@
   .slick-track {
     display: flex;
   }
-
+  .slick-list,
+  .slick-track {
+    min-width: 100%;
+  }
   .prev,
   .next {
     position: relative;
@@ -122,9 +125,17 @@
 .medical-steps__slider-item {
   display: flex !important;
   flex-direction: column;
+  min-width: 33.33%;
   height: auto;
   padding-right: 50px;
   list-style: none;
+
+  @include max(768) {
+    min-width: 50%;
+  }
+  @include max(540) {
+    min-width: 100%;
+  }
 }
 
 .medical-steps__slider-title {

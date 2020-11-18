@@ -117,7 +117,7 @@ svg {
   //свойство для исправления бага 100vh для мобильных
   min-height: -moz-available;
   min-height: -webkit-fill-available;
-  min-height:         fill-available;
+  min-height: fill-available;
   //свойство для плавной прокрутки на яблоках
 
   -webkit-overflow-scrolling: touch;
@@ -147,7 +147,7 @@ svg {
   }
 }
 
-.sections-wrap{
+.sections-wrap {
   overflow: hidden;
 }
 

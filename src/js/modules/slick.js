@@ -85,19 +85,15 @@ module.exports = function() {
     '90%,-90%', '70%,-90%', '50%,-90%', '30%,-90%', '10%,-90%', '-10%,-90%', '-30%,-90%', '-50%,-90%', '-70%,-90%', '-90%,-90%'
   ];
 
-  //array of selected squares
-  let selectedSquare = ['', 15, 55, 72, 99];
-
   $('#cosmetics-slider__list').on('afterChange', function(event, slick, currentSlide, nextSlide){
-    let square = slick.currentSlide; //number of current slide
+    let activePosition = $(this).find('.slick-active').data('position');
 
-    if(square === 0) {
+    if(activePosition === 0) {
       //conditions for the first slide
       $(img).css({ transform: 'translate(0, 0) scale(1)'});
     }else {
       //current square number
-      let selectPoint = selectedSquare[square];
-      $(img).css({ transform: 'translate(' + arrTransformImg[selectPoint] + ') scale(2)'});
+      $(img).css({ transform: 'translate(' + arrTransformImg[activePosition] + ') scale(2)'});
     }
   });
   // end slickSlider from cosmetic page

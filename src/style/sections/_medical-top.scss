@@ -122,6 +122,19 @@
   }
 }
 
+.medical-top__right-bottom-article{
+  margin-bottom: 150px;
+  @include max(1024) {
+    margin-bottom: 100px;
+  }
+  @include max(768) {
+    margin-bottom: 50px;
+  }
+  &:last-child{
+    margin-bottom: 0 !important;
+  }
+}
+
 .medical-top__right-title {
   font-family: $font-title;
   font-weight: 500;
@@ -141,17 +154,11 @@
   align-items: center;
   height: 60px;
   margin-top: auto;
-  margin-bottom: 150px;
   text-decoration: none;
   color: #413033;
   border-bottom: 1px solid $text;
 
-  @include max(1024) {
-    margin-bottom: 100px;
-  }
-  @include max(768) {
-    margin-bottom: 50px;
-  }
+
 }
 
 .medical-top__right-bottom-img {
